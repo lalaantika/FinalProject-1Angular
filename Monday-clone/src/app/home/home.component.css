@@ -17,8 +17,13 @@ h1{
     color: rgb(50, 51, 56);
     text-align: center;
     font-family: Helvetica, Arial, sans-serif;
+    margin-top: 10px;
 }
 .btn-position{
     display: flex;
     justify-content: center;
+}
+.home-img{
+    margin-top: 50px;;
+    width: 100%;
 }
