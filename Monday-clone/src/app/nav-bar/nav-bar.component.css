@@ -1,0 +1,14 @@
+.ui.secondary.menu .item {
+    font-size: 18px;
+}
+.logo {
+    font-size: 70px;;
+    border-radius: 1px;
+}
+.ui.secondary.menu{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  
+}
