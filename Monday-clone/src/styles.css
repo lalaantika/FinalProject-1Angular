@@ -1,0 +1,15 @@
+.background{
+    background-color: #F5F6F8;
+}
+.get-started{
+    background-color: #4353FF;
+    width:180px;
+    height:60px;
+    border-radius: 25px;
+    color: white;
+    font-size: 18px;
+    padding: 16px;
+}
+.darkwhite-background{
+    background-color: #f8f8fa;
+}
