@@ -1,17 +1,18 @@
 .margin {
-margin-top: 70px;
+margin-top: 10rem;
 }
-
-h1{
+.main-heading{
+    text-align: center;
+}
+.heading{
     margin-top: 80px;
     font-size: 50px;
     font-weight: 700;
     line-height: 60px;
     color: rgb(50, 51, 56);
-    text-align: center;
 }
 .text-style{
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 300;
     line-height: 32px;
     color: rgb(50, 51, 56);
@@ -26,4 +27,34 @@ h1{
 .home-img{
     margin-top: 50px;;
     width: 100%;
+}
+.partners-logo{
+  width: 95%;
+}
+.logo-position{
+    margin-right: 30px; 
+    margin-left: 10rem;
+}
+.video-size{
+    width: 700px;
+    height:500px;
+    padding-right: 8rem;
+}
+.padding{
+    padding-top: 80px;
+}
+.text-style-video{
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 32px;
+    color: rgb(50, 51, 56);
+    text-align: left;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.video-heading{
+    text-align: left;
+    margin-left: 20px;
+    padding-top: 10rem;
 }
