@@ -46,7 +46,6 @@
 .video-size {
     width: 700px;
     height: 500px;
-    padding-right: 8rem;
 }
 
 .padding {
@@ -61,12 +60,10 @@
     text-align: left;
     font-family: Helvetica, Arial, sans-serif;
     margin-top: 20px;
-    margin-left: 20px;
 }
 
 .video-heading {
     text-align: left;
-    margin-left: 20px;
     padding-top: 10rem;
 }
 
