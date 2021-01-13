@@ -1,0 +1,37 @@
+.logo {
+    width: 80%;
+    margin-top: -1.75rem;
+}
+
+.margin {
+    margin-top: 10rem;
+}
+
+h3 {
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+ul > li {
+    list-style: none;
+    margin-left: -3.75rem;
+    line-height: 3rem;
+}
+
+.img {
+    filter: grayscale(100);
+    width: 3rem;
+}
+
+.img:hover{
+    filter: none;
+}
+
+.margin-left{
+    margin-left: 1.75rem;
+}
+
+.ending-margin {
+    padding-bottom: 4rem;
+    padding-left: 35rem;
+}

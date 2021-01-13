@@ -6,19 +6,44 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { UserPageComponent } from './user-page/user-page.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuth } from '@angular/fire/auth'
+import { AngularFireAuthModule } from '@angular/fire/auth'
+import { AngularFireDatabaseModule } from '@angular/fire/database'
+import { AngularFirestoreModule } from '@angular/fire/firestore'
+import { FormsModule } from '@angular/forms';
+import { UserAuthserviceService } from './services/user-authservice.service';
+import { Routes } from '@angular/router';
+import { LogInComponent } from './log-in/log-in.component';
+import { PricingComponent } from './pricing/pricing.component';
 
+
+const routes: Routes = [
+];
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    UserPageComponent,
+    SignUpComponent,
+    LogInComponent,
+    PricingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [UserAuthserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

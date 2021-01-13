@@ -1,0 +1,35 @@
+<div class="margin container">
+    <div class="row">
+        <div class="ui secondary menu">
+            <div class="col-md-1">
+                <label class="" for="projectName">Project Name</label>
+            </div>
+            <div class="col-md-4">
+                <input name="projectName" #projectName class="form-control" required autofocus/>
+            </div>
+            <button type="submit" class="btn-main"
+            (click)="projectService.createProject(projectName.value, uid)">
+                Create Project
+            </button>
+        </div>
+    </div>
+    <div class="row txt-color-purple">
+        <div class="background margin-top">
+            <table>
+                <tr class ="">
+                    <th>Project Name </th>
+                    <th>Uid </th>
+                </tr>
+            </table>
+            <div class="" *ngIf="allProjectData?.length > 0">
+                <table>
+                    <tr class=" " *ngFor="let project of allProjectData">
+                        <td> {{ project.projectName }}</td>
+                        <td> {{project.creationDate.seconds * (1000.0)| date: 'yyyy-MM-dd'}}</td>
+                        <td> {{project.creationDate.seconds * (1000.0)| date: 'hh:mm'}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div> 
+    </div> 
+</div>

@@ -1,6 +1,7 @@
 .ui.secondary.menu .item {
     font-size: 18px;
     font-weight: bold;
+
 }
 .logo {
     font-size: 80px;;
@@ -11,6 +12,7 @@
     position: fixed;
     overflow: hidden;
     top: 0;
-    width: 90%;
+    width: 160rem;
     z-index: 99999;
+    padding-left: 50px;
 }

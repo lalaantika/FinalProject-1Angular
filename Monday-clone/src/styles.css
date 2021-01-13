@@ -1,15 +1,59 @@
-.background{
+.background {
     background-color: #F5F6F8;
 }
-.get-started{
+
+.get-started {
     background-color: #4353FF;
-    width:180px;
-    height:60px;
+    width: 180px;
+    height: 60px;
     border-radius: 25px;
     color: white;
     font-size: 18px;
     padding: 16px;
 }
-.darkwhite-background{
+
+.darkwhite-background {
     background-color: #f8f8fa;
+}
+
+.margin {
+    margin-top: 10rem;
+}
+
+.txt-color-red {
+    color: #FB255D
+}
+
+.txt-color-yellow {
+    color: #FFCC01
+}
+
+.txt-color-green {
+    color: #03CC70
+}
+
+.txt-color-purple {
+    color: #A358DF
+}
+
+.main-heading {
+    text-align: center;
+}
+
+.heading {
+    margin-top: 80px;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+    color: rgb(50, 51, 56);
+}
+
+.text-style {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 32px;
+    color: rgb(50, 51, 56);
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-top: 10px;
 }

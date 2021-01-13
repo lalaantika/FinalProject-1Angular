@@ -1,0 +1,40 @@
+<div class="margin container">
+    <div class="row margin">
+        <div class="col-md-12">
+            <h1 class="txt-alignment txt-heading">Log In</h1>
+        </div>
+    </div>
+    <form class="margin">
+        <div class="row margin-top">
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <label class="txt-alignment txt-size" for="email">Email</label>
+            </div>
+            <div class="col-md-4">
+                <input name="email" type="email" #email class="form-control" required autofocus/>
+            </div>
+        </div>
+        <div class="row margin-top">
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <label class=" txt-alignment txt-size" for="Password">Password</label>
+            </div>
+            <div class="col-md-4">
+                <input type="password" name="password" #password class="form-control" required autofocus /> 
+            </div>
+        </div>
+        <div class="row margin-top">
+            <div class="col-md-5"></div>
+            <div class="col-md-2">
+                <h3></h3>
+                <h3></h3>
+                <button type="submit" class="get-started"(click)="authService.login(email.value, password.value)">
+                    Log In
+                </button>
+            </div>
+        </div>
+    </form>
+    <!-- <div class="row">
+        <app-footer></app-footer>
+    </div> -->
+</div>
