@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { UserAuthserviceService } from '../services/user-authservice.service';
-import { UserInfoService } from '../services/user-info.service';
 
 @Component({
-  selector: 'app-sign-up',
-  templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.css']
+  selector: 'app-log-in',
+  templateUrl: './log-in.component.html',
+  styleUrls: ['./log-in.component.css']
 })
-export class SignUpComponent implements OnInit {
+export class LogInComponent implements OnInit {
 
   constructor(public authService: UserAuthserviceService) { }
 

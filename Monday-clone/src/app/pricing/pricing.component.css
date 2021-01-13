@@ -1,0 +1,59 @@
+.free-word {
+    color: #03CC70;
+}
+
+.free-word:hover{
+    text-decoration: none;
+}
+
+.top-border {
+    border: 2px solid grey;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+}
+
+.basic {
+    border-top: 10px solid #FB255D! important;
+}
+
+.standard {
+    border-top: 10px solid #FFCC01! important;
+}
+
+.pro {
+    border-top: 10px solid #03CC70! important;
+}
+
+.enterprise {
+    border-top: 10px solid #A358DF! important;
+
+}
+
+.txt-bold {
+    font-weight: 700;
+}
+
+.get-trial {
+    color: #4353FF;
+    background-color: white;
+    border-color: #4353FF;
+}
+
+.padding {
+    padding: 2rem;
+}
+
+.btn-place {
+    justify-content: center;
+}
+
+p {
+    margin: 1rem 0 1rem 0;
+}
+
+.inner-heading {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+}

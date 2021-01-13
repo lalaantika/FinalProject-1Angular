@@ -14,8 +14,15 @@ import { AngularFireAuth } from '@angular/fire/auth'
 import { AngularFireAuthModule } from '@angular/fire/auth'
 import { AngularFireDatabaseModule } from '@angular/fire/database'
 import { AngularFirestoreModule } from '@angular/fire/firestore'
+import { FormsModule } from '@angular/forms';
+import { UserAuthserviceService } from './services/user-authservice.service';
+import { Routes } from '@angular/router';
+import { LogInComponent } from './log-in/log-in.component';
+import { PricingComponent } from './pricing/pricing.component';
 
 
+const routes: Routes = [
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +30,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore'
     HomeComponent,
     FooterComponent,
     UserPageComponent,
-    SignUpComponent
+    SignUpComponent,
+    LogInComponent,
+    PricingComponent
   ],
   imports: [
     BrowserModule,
@@ -32,8 +41,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore'
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFirestoreModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [UserAuthserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
