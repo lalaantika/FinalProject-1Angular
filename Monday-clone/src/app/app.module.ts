@@ -19,6 +19,7 @@ import { UserAuthserviceService } from './services/user-authservice.service';
 import { Routes } from '@angular/router';
 import { LogInComponent } from './log-in/log-in.component';
 import { PricingComponent } from './pricing/pricing.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 const routes: Routes = [
@@ -42,6 +43,7 @@ const routes: Routes = [
     AngularFireDatabaseModule,
     AngularFirestoreModule,
     FormsModule,
+    NgbModule,
   ],
   providers: [UserAuthserviceService],
   bootstrap: [AppComponent]
