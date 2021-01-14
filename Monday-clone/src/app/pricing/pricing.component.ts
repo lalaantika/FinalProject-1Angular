@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-pricing',
@@ -6,10 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pricing.component.css']
 })
 export class PricingComponent implements OnInit {
-
+  public isCollapsed = false;
   constructor() { }
-
   ngOnInit(): void {
   }
-
 }
