@@ -20,6 +20,7 @@ import { Routes } from '@angular/router';
 import { LogInComponent } from './log-in/log-in.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EnterpriseComponent } from './enterprise/enterprise.component';
 
 
 const routes: Routes = [
@@ -33,7 +34,8 @@ const routes: Routes = [
     UserPageComponent,
     SignUpComponent,
     LogInComponent,
-    PricingComponent
+    PricingComponent,
+    EnterpriseComponent
   ],
   imports: [
     BrowserModule,

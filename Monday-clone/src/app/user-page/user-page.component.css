@@ -1,0 +1,11 @@
+.table-heading {
+    padding: 3rem;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.table-content-font {
+    padding: 3rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+}

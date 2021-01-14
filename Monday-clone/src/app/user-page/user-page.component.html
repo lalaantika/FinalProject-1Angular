@@ -8,28 +8,30 @@
                 <input name="projectName" #projectName class="form-control" required autofocus/>
             </div>
             <button type="submit" class="btn-main"
-            (click)="projectService.createProject(projectName.value, uid)">
+            (click)="projectService.createProject(projectName.value, uid, 
+            userData.firstName)">
                 Create Project
             </button>
         </div>
     </div>
-    <div class="row txt-color-purple">
+    <div class="row txt-color-red">
         <div class="background margin-top">
-            <table>
-                <tr class ="">
-                    <th>Project Name </th>
-                    <th>Uid </th>
+            <table class="margin">
+                <tr class ="table-heading">
+                    <th class ="table-heading">Project Name </th>
+                    <th class ="table-heading">Project Onwer</th>
+                    <th class ="table-heading">Project Creation Date </th>
+                    <th class ="table-heading">Project Creation Time</th>
                 </tr>
-            </table>
-            <div class="" *ngIf="allProjectData?.length > 0">
-                <table>
-                    <tr class=" " *ngFor="let project of allProjectData">
-                        <td> {{ project.projectName }}</td>
-                        <td> {{project.creationDate.seconds * (1000.0)| date: 'yyyy-MM-dd'}}</td>
-                        <td> {{project.creationDate.seconds * (1000.0)| date: 'hh:mm'}}</td>
+                <div class="" *ngIf="allProjectData?.length > 0">
+                    <tr class="txt-color-green" *ngFor="let project of allProjectData">
+                        <td class="table-content-font"> {{ project.projectName }}</td>
+                        <td class="table-content-font"> {{project.projectCreator}}</td>
+                        <td class="table-content-font"> {{project.creationDate.seconds * (1000.0)| date: 'yyyy-MM-dd'}}</td>
+                        <td class="table-content-font"> {{project.creationDate.seconds * (1000.0)| date: 'hh:mm'}}</td>
                     </tr>
-                </table>
-            </div>
+                </div>
+            </table>
         </div> 
     </div> 
 </div>

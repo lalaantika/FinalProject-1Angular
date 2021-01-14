@@ -13,11 +13,12 @@ export class ProjectDataService {
   constructor(public db: AngularFirestore,
     private idStore: IdStorageService) { }
 
-    createProject(projectName:string, uid:string){
+    createProject(projectName:string, uid:string, projectCreator: string){
       let today = new Date();
       return this.db.collection('projectData').add({
         projectName: projectName,
         uid: uid,
+        projectCreator: projectCreator,
         creationDate: today,
       })
     }
