@@ -7,18 +7,25 @@
             <div class="col-md-4">
                 <input name="projectName" #projectName class="form-control" required autofocus/>
             </div>
+            <div class="col-md-1">
+                <label class="" for="noOfTasks">How many Tasks</label>
+            </div>
+            <div class="col-md-4">
+                <input name="noOfTasks" #noOfTasks class="form-control" required autofocus/>
+            </div>
             <button type="submit" class="btn-main"
             (click)="projectService.createProject(projectName.value, uid, 
-            userData.firstName)">
+            userData.firstName, noOfTasks.value)"(click)="reload()">
                 Create Project
             </button>
         </div>
     </div>
-    <div class="row txt-color-red">
+    <div class="row">
         <div class="background margin-top">
             <table class="">
                 <thead>
                     <tr>
+                        <th class ="txt-color-black">Number of Tasks</th>
                         <th class ="txt-color-red">Project Name </th>
                         <th class ="txt-color-yellow">Project Onwer</th>
                         <th class ="txt-color-green">Project Creation Date </th>
@@ -27,6 +34,7 @@
                 </thead>
                 <tbody class="" *ngIf="allProjectData?.length > 0">
                         <tr *ngFor="let project of allProjectData">
+                            <td class ="txt-color-black"> {{ project.noOfTasks }}</td>
                             <td class ="txt-color-red"> {{ project.projectName }}</td>
                             <td class ="txt-color-yellow"> {{project.projectCreator}}</td>
                             <td class="txt-color-green"> {{project.creationDate.seconds * (1000.0)| date: 'yyyy-MM-dd'}}</td>
@@ -35,5 +43,8 @@
                 </tbody>
             </table>
         </div> 
-    </div> 
+    </div>
+    <div class= "row">
+        
+    </div>
 </div>

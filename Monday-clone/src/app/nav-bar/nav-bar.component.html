@@ -15,9 +15,14 @@
       Pricing
     </a>
     <div class ="right menu">
-        <a routerLink="log-in" class="ui item btn-main ">
+        <a routerLink="log-in" class="ui item btn-main" *ngIf="isLoggedIn$=='false'; else notLoggedIn">
             Login
         </a>
+        <ng-template #notLoggedIn>
+          <a routerLink="home" class="ui item btn-main " (click)="userauthService.logout()"(click)="reload()">
+            Log out
+          </a>
+        </ng-template>
         <a routerLink="sign-up" class="ui item btn-main">
           <button class="get-started"> Get Started</button>  
         </a>
