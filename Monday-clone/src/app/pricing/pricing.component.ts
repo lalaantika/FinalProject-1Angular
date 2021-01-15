@@ -8,7 +8,9 @@ import {NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
 })
 export class PricingComponent implements OnInit {
   public isCollapsed = false;
+
   constructor() { }
+  
   ngOnInit(): void {
   }
 }

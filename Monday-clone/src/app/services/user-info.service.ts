@@ -14,12 +14,12 @@ export class UserInfoService {
   constructor(public db:AngularFirestore,
     public afAuth: UserAuthserviceService, public router:Router) { }
 
-    getUserByID(uid: string): Observable<User> {
-      return this.db.collection('UserInfo').doc(uid).snapshotChanges().pipe(
-        map(res => {
-          const user = res.payload.data() as User;
-          return user;
-        })
-      );
-    }
+  getUserByID(uid: string): Observable<User> {
+    return this.db.collection('UserInfo').doc(uid).snapshotChanges().pipe(
+      map(res => {
+        const user = res.payload.data() as User;
+        return user;
+      })
+    );
+  }
 }

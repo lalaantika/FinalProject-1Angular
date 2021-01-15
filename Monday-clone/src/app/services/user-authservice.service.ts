@@ -18,7 +18,8 @@ export class UserAuthserviceService {
   constructor( public afs: AngularFirestore, 
     public afAuth: AngularFireAuth, 
     public idstorage: IdStorageService,
-    public router:Router) {
+    public router:Router)
+  {
       this.afAuth.authState.subscribe(user => {
         if (user){
           this.user = user;
@@ -27,39 +28,38 @@ export class UserAuthserviceService {
           localStorage.setItem('user', null);
         }
      })
-    }
+  }
     
-    async login(email: string, password: string) {
-      var result = await this.afAuth.signInWithEmailAndPassword(email, password)
-      this.idstorage.setloggedIn("true")
-      this.router.navigate(['user-page']);
-      let uid = (await this.afAuth.currentUser).uid
-      this.idstorage.setUid(uid)
-    }
-     
-    async register(email: string, password: string, fname:string,
-      lname: string, phone:string, city:string) {
-     var result = await this.afAuth.createUserWithEmailAndPassword(email, password)
-     let uid = (await this.afAuth.currentUser).uid
-     this.idstorage.setUid(uid)
-     this.idstorage.setloggedIn("true")
-     this.router.navigate(['user-page']);
-     return from( this.afs.collection('/UserInfo').doc(uid).set({
-       firstName: fname, 
-       lastName: lname, 
-       email: email, 
-       phone: phone, 
-       city: city,
-     }))
-    }
+  async login(email: string, password: string) {
+    var result = await this.afAuth.signInWithEmailAndPassword(email, password)
+    this.idstorage.setloggedIn("true")
+    this.router.navigate(['user-page']);
+    let uid = (await this.afAuth.currentUser).uid
+    this.idstorage.setUid(uid)
+  }
+    
+  async register(email: string, password: string, fname:string,
+    lname: string, phone:string, city:string) {
+    var result = await this.afAuth.createUserWithEmailAndPassword(email, password)
+    let uid = (await this.afAuth.currentUser).uid
+    this.idstorage.setUid(uid)
+    this.idstorage.setloggedIn("true")
+    this.router.navigate(['user-page']);
+    return from( this.afs.collection('/UserInfo').doc(uid).set({
+      firstName: fname, 
+      lastName: lname, 
+      email: email, 
+      phone: phone, 
+      city: city,
+    }))
+  }
 
-    async logout(){
-      await this.afAuth.signOut();
-      localStorage.removeItem('user');
-      this.router.navigate(['/home']);
-      this.idstorage.setloggedIn("false")
-      let uid=""
-      this.idstorage.setUid(uid)
-    }
-
+  async logout(){
+    await this.afAuth.signOut();
+    localStorage.removeItem('user');
+    this.router.navigate(['/home']);
+    this.idstorage.setloggedIn("false")
+    let uid=""
+    this.idstorage.setUid(uid)
+  }
 }
