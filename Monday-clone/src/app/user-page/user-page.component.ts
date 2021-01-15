@@ -16,7 +16,7 @@ export class UserPageComponent implements OnInit {
   userData: UserInfo;
   allProjectData: ProjectData[];
   ride: ProjectData;
-  arrayOfNumber: any;
+  arrayOfNumber = [1,4,2,9,5,3]
   
 
   constructor(public userInfo: UserInfoService, 
@@ -27,7 +27,6 @@ export class UserPageComponent implements OnInit {
   ngOnInit(): void {
     this.getUserData();
     this.getProjectData();
-    
   }
 
   getUserData() {
@@ -40,18 +39,7 @@ export class UserPageComponent implements OnInit {
     this.projectService.getProjectbyUid(this.uid).subscribe(
       res => {
         this.allProjectData = res as unknown as  Array<ProjectData>
-        console.log(this.allProjectData)
-        console.log(this.allProjectData.indexOf[0].numberOfTask)
-        this.arrayOfNumber = [this.allProjectData[0].numberOfTask, this.allProjectData[1].numberOfTask];
-        console.log(this.arrayOfNumber);
-        this.sortingthevalues(this.arrayOfNumber);
       })
-  }
-
-  reload(){
-    setTimeout(function(){
-    location.reload();
-    },1000); 
   }
 
   sortingthevalues(arrayOfNumber) {
@@ -67,5 +55,11 @@ export class UserPageComponent implements OnInit {
         }
         console.log(arrayOfNumber);
     return arrayOfNumber;
+  }
+
+  reload(){
+    setTimeout(function(){
+    location.reload();
+    },1000); 
   }
 }
