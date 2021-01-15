@@ -23,12 +23,12 @@ ul > li {
     width: 3rem;
 }
 
-.img:hover{
+.img:hover {
     filter: none;
 }
 
-.margin-left{
-    margin-left: 1.75rem;
+.margin-left {
+    margin-left: 1rem;
 }
 
 .ending-margin {

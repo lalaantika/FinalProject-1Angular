@@ -28,13 +28,10 @@
             <div class="col-md-2">
                 <h3></h3>
                 <h3></h3>
-                <button type="submit" class="get-started"(click)="authService.login(email.value, password.value)">
+                <button type="submit" class="get-started"(click)="authService.login(email.value, password.value)"(click)="reload()">
                     Log In
                 </button>
             </div>
         </div>
     </form>
-    <!-- <div class="row">
-        <app-footer></app-footer>
-    </div> -->
 </div>

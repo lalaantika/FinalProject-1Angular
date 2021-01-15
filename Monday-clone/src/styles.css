@@ -20,6 +20,10 @@
     margin-top: 10rem;
 }
 
+.padding {
+    padding-top: 80px;
+}
+
 .txt-color-red {
     color: #FB255D
 }
@@ -36,6 +40,14 @@
     color: #A358DF
 }
 
+.txt-color-white {
+    color: white;
+}
+
+.txt-color-black {
+    color: rgb(50, 51, 56);;
+}
+
 .main-heading {
     text-align: center;
 }
@@ -45,15 +57,20 @@
     font-size: 50px;
     font-weight: 700;
     line-height: 60px;
-    color: rgb(50, 51, 56);
+    padding-top: 10px;
 }
 
 .text-style {
     font-size: 22px;
     font-weight: 300;
     line-height: 32px;
-    color: rgb(50, 51, 56);
     text-align: center;
     font-family: Helvetica, Arial, sans-serif;
     margin-top: 10px;
+}
+
+.purple-block {
+    margin-top: 10rem;
+    background-color: #2B2C5D;
+    padding-bottom: 15rem;
 }

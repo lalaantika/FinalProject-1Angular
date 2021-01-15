@@ -8,7 +8,7 @@
 
 .top-border {
     border: 2px solid grey;
-    height: auto;
+    height: 45rem;
     margin: 20px;
     padding: 20px;
 }
@@ -56,4 +56,30 @@ p {
     font-weight: 700;
     font-size: 22px;
     line-height: 22px;
+}
+
+.question-txt-font {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 23px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.question-txt-font:hover {
+    text-decoration: none;
+}
+
+.card-body {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22.4px;
+    padding: 3rem;
+    word-spacing: 4px;
+}
+
+.question-container {
+    padding: 10rem;
+    justify-content: center;
+    text-align: center;
 }

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Monday-clone": {
+    "monday-clone": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Monday-clone",
+            "outputPath": "dist/monday-clone",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Monday-clone:build"
+            "browserTarget": "monday-clone:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Monday-clone:build:production"
+              "browserTarget": "monday-clone:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Monday-clone:build"
+            "browserTarget": "monday-clone:build"
           }
         },
         "test": {
@@ -112,15 +112,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Monday-clone:serve"
+            "devServerTarget": "monday-clone:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Monday-clone:serve:production"
+              "devServerTarget": "monday-clone:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "Monday-clone"
+  "defaultProject": "monday-clone"
 }
