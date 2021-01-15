@@ -33,22 +33,28 @@
                     </tr>
                 </thead>
                 <tbody class="" *ngIf="allProjectData?.length > 0">
-                        <tr *ngFor="let project of allProjectData">
-                            <td class ="txt-color-black"> {{ project.noOfTasks }}</td>
-                            <td class ="txt-color-red"> {{ project.projectName }}</td>
-                            <td class ="txt-color-yellow"> {{project.projectCreator}}</td>
-                            <td class="txt-color-green"> {{project.creationDate.seconds * (1000.0)| date: 'yyyy-MM-dd'}}</td>
-                            <td class ="txt-color-purple"> {{project.creationDate.seconds * (1000.0)| date: 'hh:mm'}}</td>
-                        </tr>
+                    <tr *ngFor="let project of allProjectData">
+                        <td class ="txt-color-black"> {{ project.noOfTasks }}</td>
+                        <td class ="txt-color-red"> {{ project.projectName }}</td>
+                        <td class ="txt-color-yellow"> {{project.projectCreator}}</td>
+                        <td class="txt-color-green"> {{project.creationDate.seconds * (1000.0)| date: 'yyyy-MM-dd'}}</td>
+                        <td class ="txt-color-purple"> {{project.creationDate.seconds * (1000.0)| date: 'hh:mm'}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div> 
     </div>
-    <div class="row">
+    <div class="row margin">
         <tbody class="col-md-3" *ngIf="arrayOfNumber?.length > 0">
             <tr *ngFor="let number of arrayOfNumber">
                 <td class ="txt-color-black"> {{number}}</td>
             </tr>
         </tbody>
+        <button class="get-started col-md-2 margin"(click)="sortingthevalues(arrayOfNumber)">sort</button>
+        <div class="col-md-2"></div>
+        <button class="get-started col-md-2 margin"(click)="reload()">reset</button>
+    </div>
+    <div class="row">
+        <app-footer></app-footer>
     </div>
 </div>

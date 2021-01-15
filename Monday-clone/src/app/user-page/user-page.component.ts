@@ -16,7 +16,7 @@ export class UserPageComponent implements OnInit {
   userData: UserInfo;
   allProjectData: ProjectData[];
   ride: ProjectData;
-  arrayOfNumber = [1,4,9,3,5,7,2,6]
+  arrayOfNumber = [1,4,2,9,5,3]
   
 
   constructor(public userInfo: UserInfoService, 
