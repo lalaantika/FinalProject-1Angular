@@ -44,4 +44,11 @@
             </table>
         </div> 
     </div>
+    <div class="row">
+        <tbody class="col-md-3" *ngIf="arrayOfNumber?.length > 0">
+            <tr *ngFor="let number of arrayOfNumber">
+                <td class ="txt-color-black"> {{number}}</td>
+            </tr>
+        </tbody>
+    </div>
 </div>
