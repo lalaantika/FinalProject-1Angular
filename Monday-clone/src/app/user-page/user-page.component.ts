@@ -25,7 +25,6 @@ export class UserPageComponent implements OnInit {
   ngOnInit(): void {
     this.getUserData();
     this.getProjectData();
-    console.log(this.uid, this.allProjectData)
   }
 
   getUserData() {

@@ -23,11 +23,9 @@ export class ProjectDataService {
       })
     }
 
-
-
-
     getProjectbyUid(uid:string): Observable<ProjectData []> {
-      return this.db.collection('/projectData', ref => ref.where('uid', '==', uid
+      return this.db.collection('/projectData', 
+      ref => ref.where('uid', '==', uid
       ))
         .snapshotChanges().pipe(
           map(action => {
@@ -38,5 +36,5 @@ export class ProjectDataService {
             })
           })
         );
-    } 
+    }
 }

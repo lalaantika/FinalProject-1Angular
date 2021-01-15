@@ -16,21 +16,23 @@
     </div>
     <div class="row txt-color-red">
         <div class="background margin-top">
-            <table class="margin">
-                <tr class ="table-heading">
-                    <th class ="table-heading">Project Name </th>
-                    <th class ="table-heading">Project Onwer</th>
-                    <th class ="table-heading">Project Creation Date </th>
-                    <th class ="table-heading">Project Creation Time</th>
-                </tr>
-                <div class="" *ngIf="allProjectData?.length > 0">
-                    <tr class="txt-color-green" *ngFor="let project of allProjectData">
-                        <td class="table-content-font"> {{ project.projectName }}</td>
-                        <td class="table-content-font"> {{project.projectCreator}}</td>
-                        <td class="table-content-font"> {{project.creationDate.seconds * (1000.0)| date: 'yyyy-MM-dd'}}</td>
-                        <td class="table-content-font"> {{project.creationDate.seconds * (1000.0)| date: 'hh:mm'}}</td>
+            <table class="">
+                <thead>
+                    <tr>
+                        <th class ="txt-color-red">Project Name </th>
+                        <th class ="txt-color-yellow">Project Onwer</th>
+                        <th class ="txt-color-green">Project Creation Date </th>
+                        <th class ="txt-color-purple">Project Creation Time</th>
                     </tr>
-                </div>
+                </thead>
+                <tbody class="" *ngIf="allProjectData?.length > 0">
+                        <tr *ngFor="let project of allProjectData">
+                            <td class ="txt-color-red"> {{ project.projectName }}</td>
+                            <td class ="txt-color-yellow"> {{project.projectCreator}}</td>
+                            <td class="txt-color-green"> {{project.creationDate.seconds * (1000.0)| date: 'yyyy-MM-dd'}}</td>
+                            <td class ="txt-color-purple"> {{project.creationDate.seconds * (1000.0)| date: 'hh:mm'}}</td>
+                        </tr>
+                </tbody>
             </table>
         </div> 
     </div> 

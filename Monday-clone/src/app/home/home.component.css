@@ -22,10 +22,6 @@
     height: 500px;
 }
 
-.padding {
-    padding-top: 80px;
-}
-
 .text-style-video {
     font-size: 22px;
     font-weight: 300;
@@ -49,12 +45,6 @@
     line-height: 60px;
     color: whitesmoke;
     text-align: center;
-}
-
-.purple-block {
-    margin-top: 10rem;
-    background-color: #2B2C5D;
-    padding-bottom: 15rem;
 }
 
 .text-style-white {

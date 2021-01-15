@@ -1,11 +1,27 @@
-.table-heading {
-    padding: 3rem;
-    font-weight: 800;
-    font-size: 2rem;
+table {
+    width: 100%;
+    margin: 20px auto;
+    table-layout: auto;
+  }
+  
+.fixed {
+    table-layout: fixed;
+}
+  
+table,td,th {
+    border-collapse: collapse;
 }
 
-.table-content-font {
-    padding: 3rem;
+th,td {
+    padding: 10px;
+}
+
+th {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+td {
+    font-size: 16px;
     font-weight: 600;
-    font-size: 1.5rem;
 }
