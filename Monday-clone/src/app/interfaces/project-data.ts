@@ -3,5 +3,5 @@ export interface ProjectData {
     creationDate: any;
     projectName: string;
     projectCreator: string;
-    numberOfTask: number;
+    noOfTasks: number;
 }
