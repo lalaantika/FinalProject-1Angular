@@ -53,24 +53,46 @@ export class UserPageComponent implements OnInit {
     return this.arrayOfNumber
   }
 
-  sortingthevalues(arrayOfNumber) {
-    let n = arrayOfNumber.length;
-        for (let i = 1; i < n; i++) {
-            let current =arrayOfNumber[i];
-            let j = i-1; 
-            while ((j > -1) && (current <arrayOfNumber[j])) {
-              arrayOfNumber[j+1] = arrayOfNumber[j];
-                j--;
-            }
-          arrayOfNumber[j+1] = current;
-        }
-        console.log(arrayOfNumber);
-    return arrayOfNumber;
-  }
+  // sortingthevalues(arrayOfNumber) {
+  //   let n = arrayOfNumber.length;
+  //       for (let i = 1; i < n; i++) {
+  //           let current =arrayOfNumber[i];
+  //           let j = i-1; 
+  //           while ((j > -1) && (current <arrayOfNumber[j])) {
+  //             arrayOfNumber[j+1] = arrayOfNumber[j];
+  //               j--;
+  //           }
+  //         arrayOfNumber[j+1] = current;
+  //       }
+  //       console.log(arrayOfNumber);
+  //   return arrayOfNumber;
+  // }
 
   reload(){
     setTimeout(function(){
     location.reload();
     },1000); 
+  }
+
+  swap(arr, first_Index, second_Index){
+    var temp = arr[first_Index];
+    arr[first_Index] = arr[second_Index];
+    arr[second_Index] = temp;
+  }
+
+  bubble_Sort(arrayOfNumber){
+
+    var len = arrayOfNumber.length,
+        i, j, stop;
+
+    for (i=0; i < len; i++){
+        for (j=0, stop=len-i; j < stop; j++){
+            if (arrayOfNumber[j] > arrayOfNumber[j+1]){
+                this.swap(arrayOfNumber, j, j+1);
+            }
+        }
+    }
+
+    return arrayOfNumber;
   }
 }

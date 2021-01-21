@@ -45,12 +45,17 @@
         </div> 
     </div>
     <div class="row margin">
+        <thead>
+            <tr>
+                <th>Sorted Tasks </th>
+            </tr>
+        </thead>
         <tbody class="col-md-3" *ngIf="arrayOfNumber?.length > 0">
             <tr *ngFor="let number of arrayOfNumber">
                 <td class ="txt-color-black"> {{number}}</td>
             </tr>
         </tbody>
-        <button class="get-started col-md-2 margin"(click)="sortingthevalues(arrayOfNumber)">sort</button>
+        <button class="get-started col-md-2 margin"(click)="bubble_Sort(arrayOfNumber)">sort</button>
         <div class="col-md-2"></div>
         <button class="get-started col-md-2 margin"(click)="reload()">reset</button>
     </div>
