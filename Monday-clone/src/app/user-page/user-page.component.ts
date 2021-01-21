@@ -16,7 +16,7 @@ export class UserPageComponent implements OnInit {
   userData: UserInfo;
   allProjectData: ProjectData[];
   ride: ProjectData;
-  arrayOfNumber = [1,4,2,9,5,3]
+  arrayOfNumber = []
   
 
   constructor(public userInfo: UserInfoService, 
@@ -39,7 +39,18 @@ export class UserPageComponent implements OnInit {
     this.projectService.getProjectbyUid(this.uid).subscribe(
       res => {
         this.allProjectData = res as unknown as  Array<ProjectData>
+       this.getTaskNumbers(this.allProjectData)
       })
+  }
+
+  getTaskNumbers(allProjectData: ProjectData[]) {
+    console.log(allProjectData)
+    console.log(this.allProjectData[0].noOfTasks)
+    for (var i = 0; i < allProjectData.length; i++) {
+         this.arrayOfNumber[i]=allProjectData[i].noOfTasks
+    }
+    console.log(this.arrayOfNumber)
+    return this.arrayOfNumber
   }
 
   sortingthevalues(arrayOfNumber) {
