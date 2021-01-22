@@ -1,0 +1,76 @@
+.background {
+    background-color: #F5F6F8;
+}
+
+.get-started {
+    background-color: #4353FF;
+    width: 180px;
+    height: 60px;
+    border-radius: 25px;
+    color: white;
+    font-size: 18px;
+    padding: 16px;
+}
+
+.darkwhite-background {
+    background-color: #f8f8fa;
+}
+
+.margin {
+    margin-top: 10rem;
+}
+
+.padding {
+    padding-top: 80px;
+}
+
+.txt-color-red {
+    color: #FB255D
+}
+
+.txt-color-yellow {
+    color: #FFCC01
+}
+
+.txt-color-green {
+    color: #03CC70
+}
+
+.txt-color-purple {
+    color: #A358DF
+}
+
+.txt-color-white {
+    color: white;
+}
+
+.txt-color-black {
+    color: rgb(50, 51, 56);;
+}
+
+.main-heading {
+    text-align: center;
+}
+
+.heading {
+    margin-top: 80px;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+    padding-top: 10px;
+}
+
+.text-style {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 32px;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-top: 10px;
+}
+
+.purple-block {
+    margin-top: 10rem;
+    background-color: #2B2C5D;
+    padding-bottom: 15rem;
+}

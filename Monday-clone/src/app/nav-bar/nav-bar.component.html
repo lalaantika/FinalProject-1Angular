@@ -1,0 +1,30 @@
+<div class=" background ui secondary  menu margin">
+  <a routerLink="home" class=" item">
+    <img class="logo" src="/assets/Images/logo.png"/>
+  </a>
+  <a routerLink="home" class=" item">
+    Product
+  </a>
+  <a routerLink="enterprise" class="item">
+    Enterprise
+  </a>
+  <a routerLink="pricing" class="item ">
+    Pricing
+  </a>
+  <div class ="right menu">
+    <a routerLink="log-in" class="ui item btn-main" *ngIf="isLoggedIn$=='false'; else notLoggedIn">
+        Login
+    </a>
+    <ng-template #notLoggedIn>
+      <a routerLink="home" class="ui item btn-main " (click)="userauthService.logout()"(click)="reload()">
+        Log out
+      </a>
+      <a routerLink="user-page" class="item ">
+        Profile-page
+      </a>
+    </ng-template>
+    <a routerLink="sign-up" class="ui item btn-main">
+      <button class="get-started"> Get Started</button>  
+    </a>
+  </div>
+</div>

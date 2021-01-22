@@ -1,0 +1,65 @@
+<div class="margin container">
+    <div class="row">
+        <div class="ui secondary menu">
+            <div class="col-md-1">
+                <label class="" for="projectName">Project Name</label>
+            </div>
+            <div class="col-md-4">
+                <input name="projectName" #projectName class="form-control" required autofocus/>
+            </div>
+            <div class="col-md-1">
+                <label class="" for="noOfTasks">How many Tasks</label>
+            </div>
+            <div class="col-md-4">
+                <input name="noOfTasks" #noOfTasks class="form-control" required autofocus/>
+            </div>
+            <button type="submit" class="btn-main"
+            (click)="projectService.createProject(projectName.value, uid, 
+            userData.firstName, noOfTasks.value)"(click)="reload()">
+                Create Project
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="background margin-top">
+            <table class="">
+                <thead>
+                    <tr>
+                        <th class ="txt-color-black">Number of Tasks</th>
+                        <th class ="txt-color-red">Project Name </th>
+                        <th class ="txt-color-yellow">Project Onwer</th>
+                        <th class ="txt-color-green">Project Creation Date </th>
+                        <th class ="txt-color-purple">Project Creation Time</th>
+                    </tr>
+                </thead>
+                <tbody class="" *ngIf="allProjectData?.length > 0">
+                    <tr *ngFor="let project of allProjectData">
+                        <td class ="txt-color-black"> {{ project.noOfTasks }}</td>
+                        <td class ="txt-color-red"> {{ project.projectName }}</td>
+                        <td class ="txt-color-yellow"> {{project.projectCreator}}</td>
+                        <td class="txt-color-green"> {{project.creationDate.seconds * (1000.0)| date: 'yyyy-MM-dd'}}</td>
+                        <td class ="txt-color-purple"> {{project.creationDate.seconds * (1000.0)| date: 'hh:mm'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> 
+    </div>
+    <div class="row margin">
+        <thead>
+            <tr>
+                <th>Sorted Tasks </th>
+            </tr>
+        </thead>
+        <tbody class="col-md-3" *ngIf="arrayOfNumber?.length > 0">
+            <tr *ngFor="let number of arrayOfNumber">
+                <td class ="txt-color-black"> {{number}}</td>
+            </tr>
+        </tbody>
+        <button class="get-started col-md-2 margin"(click)="bubble_Sort(arrayOfNumber)">sort</button>
+        <div class="col-md-2"></div>
+        <button class="get-started col-md-2 margin"(click)="reload()">reset</button>
+    </div>
+    <div class="row">
+        <app-footer></app-footer>
+    </div>
+</div>

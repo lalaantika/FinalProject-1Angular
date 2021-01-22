@@ -1,0 +1,85 @@
+.free-word {
+    color: #03CC70;
+}
+
+.free-word:hover{
+    text-decoration: none;
+}
+
+.top-border {
+    border: 2px solid grey;
+    height: 45rem;
+    margin: 20px;
+    padding: 20px;
+}
+
+.basic {
+    border-top: 10px solid #FB255D! important;
+}
+
+.standard {
+    border-top: 10px solid #FFCC01! important;
+}
+
+.pro {
+    border-top: 10px solid #03CC70! important;
+}
+
+.enterprise {
+    border-top: 10px solid #A358DF! important;
+
+}
+
+.txt-bold {
+    font-weight: 700;
+}
+
+.get-trial {
+    color: #4353FF;
+    background-color: white;
+    border-color: #4353FF;
+}
+
+.padding {
+    padding: 2rem;
+}
+
+.btn-place {
+    justify-content: center;
+}
+
+p {
+    margin: 1rem 0 1rem 0;
+}
+
+.inner-heading {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.question-txt-font {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 23px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.question-txt-font:hover {
+    text-decoration: none;
+}
+
+.card-body {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22.4px;
+    padding: 3rem;
+    word-spacing: 4px;
+}
+
+.question-container {
+    padding: 10rem;
+    justify-content: center;
+    text-align: center;
+}

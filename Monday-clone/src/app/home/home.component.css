@@ -1,0 +1,59 @@
+.btn-position {
+    display: flex;
+    justify-content: center;
+}
+
+.home-img {
+    margin-top: 50px;;
+    width: 100%;
+}
+
+.partners-logo {
+  width: 95%;
+} 
+
+.logo-position {
+    margin-right: 30px; 
+    margin-left: 10rem;
+}
+
+.video-size {
+    width: 700px;
+    height: 500px;
+}
+
+.text-style-video {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 32px;
+    color: rgb(50, 51, 56);
+    text-align: left;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+}
+
+.video-heading {
+    text-align: left;
+    padding-top: 10rem;
+}
+
+.white-heading {
+    margin-top: 80px;
+    padding-top: 10rem;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.text-style-white {
+    font-size: 22px;
+    text-align: center;
+    font-weight: 300;
+    line-height: 32px;
+    color: whitesmoke;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+    margin-left: 20px;
+}
